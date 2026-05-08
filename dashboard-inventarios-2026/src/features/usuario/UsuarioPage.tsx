@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { Badge } from '../../shared/components/Badge';
 import { DataTable, type DataTableColumn } from '../../shared/components/DataTable';
-import { DateFilterModeSelector } from '../../shared/components/DateFilterModeSelector';
+import { DateFilter } from '../../shared/components/DateFilter';
 import { EmptyState } from '../../shared/components/EmptyState';
 import { FiltersBar } from '../../shared/components/FiltersBar';
 import { KpiCard } from '../../shared/components/KpiCard';
@@ -268,7 +268,7 @@ export function UsuarioPage() {
           </select>
         </label>
 
-        <DateFilterModeSelector value={dateFilter} onChange={setDateFilter} />
+        <DateFilter value={dateFilter} onChange={setDateFilter} />
       </FiltersBar>
 
       {copyStatus ? <div className="copy-status">{copyStatus}</div> : null}

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { Badge } from '../../shared/components/Badge';
 import { DataTable, type DataTableColumn } from '../../shared/components/DataTable';
-import { DateFilterModeSelector } from '../../shared/components/DateFilterModeSelector';
+import { DateFilter } from '../../shared/components/DateFilter';
 import { FiltersBar } from '../../shared/components/FiltersBar';
 import { KpiCard } from '../../shared/components/KpiCard';
 import { LoadingState } from '../../shared/components/LoadingState';
@@ -353,7 +353,7 @@ export function MetricasPage() {
           </button>
         }
       >
-        <DateFilterModeSelector value={dateFilter} onChange={setDateFilter} />
+        <DateFilter value={dateFilter} onChange={setDateFilter} />
 
         <label className="field">
           <span className="field__label">BU</span>
